@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>joombig banner auto slider</name>
+	<author>joombig.com</author>
+	<creationDate>Mach 2014</creationDate>
+	<copyright>Copyright (C) 2013 joombig.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@joombig.com</authorEmail>
+	<authorUrl>www.joombig.com</authorUrl>
+	<version>1.0</version>
+	<description>MODULE_DESC</description>
+	 <languages>
+    <language tag="en-GB">language/en-GB.mod_joombig_banner_auto_slider.ini</language>
+  </languages>
+	<files>
+		<filename module="mod_joombig_banner_auto_slider">mod_joombig_banner_auto_slider.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>elements/</folder>
+		<folder>assets/</folder>
+		<folder>tmpl/</folder>
+		<folder>language/</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_joombig_banner_auto_slider/elements">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+				<field name="enable_jQuery" type="radio" default="1" label="Enable/Disable jQuery" description="select Enable/Disable">
+					<option value="1">Enable</option>
+					<option value="0">Disable</option>
+				</field>
+				<field name="path" type="foldertree" default="" directory="images" filter="" label="Image large directory" description="Select a image directory" />
+				<field name="width_module" type="text" default="100%" label="Width of Module(%)" description="Width of Module(%)" />
+				<!--<field name="height_module" type="text" default="512" label="Height of Module" description="Height without px" />-->
+				<field name="left_module" type="text" default="0" label="Left of Module" description="Left without px" />
+				<field name="animation_style" type="list" default="random" label="Animation style" description="Animation style when transition images">
+					<option value="random">random</option>
+					<option value="boxslide">boxslide</option>
+					<option value="boxfade">boxfade</option>
+					<option value="slotslide-horizontal">slotslide-horizontal</option>
+					<option value="slotslide-vertical">slotslide-vertical</option>
+					<option value="curtain-1">curtain-1</option>
+					<option value="curtain-2">curtain-2</option>
+					<option value="curtain-3">curtain-3</option>
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+					<option value="slotfade-horizontal">slotfade-horizontal</option>
+					<option value="slotfade-vertical">slotfade-vertical</option>
+					<option value="fade">fade</option>
+					<option value="slideleft">slideleft</option>
+					<option value="slideup">slideup</option>
+					<option value="slidedown">slidedown</option>
+					<option value="slideright">slideright</option>
+					<option value="papercut">papercut</option>
+					<option value="3dcurtain-horizontal">3dcurtain-horizontal</option>
+					<option value="3dcurtain-vertical">3dcurtain-vertical</option>
+					<option value="cubic">cubic</option>
+					<option value="cube">cube</option>
+					<option value="flyin">flyin</option>
+					<option value="turnoff">turnoff</option>
+					<option value="incube">incube</option>
+					<option value="cubic-horizontal">cubic-horizontal</option>
+					<option value="cube-horizontal">cube-horizontal</option>
+					<option value="incube-horizontal">incube-horizontal</option>
+					<option value="turnoff-vertical">turnoff-vertical</option>
+					<option value="fadefromright">fadefromright</option>
+					<option value="fadefromleft">fadefromleft</option>
+					<option value="fadefromtop">fadefromtop</option>
+					<option value="fadefrombottom">fadefrombottom</option>
+					<option value="fadetoleftfadefromright">fadetoleftfadefromright</option>
+					<option value="fadetorightfadetoleft">fadetorightfadetoleft</option>
+					<option value="fadetobottomfadefromtop">fadetobottomfadefromtop</option>
+					<option value="fadetotopfadefrombottom">fadetotopfadefrombottom</option>
+					<option value="parallaxtoright">parallaxtoright</option>
+					<option value="parallaxtoleft">parallaxtoleft</option>
+					<option value="parallaxtotop">parallaxtotop</option>
+					<option value="parallaxtobottom">parallaxtobottom</option>
+					<option value="scaledownfromright">scaledownfromright</option>
+					<option value="scaledownfromleft">scaledownfromleft</option>
+					<option value="scaledownfromtop">scaledownfromtop</option>
+					<option value="scaledownfrombottom">scaledownfrombottom</option>
+					<option value="zoomout">zoomout</option>
+					<option value="zoomin">zoomin</option>
+				</field>
+				<field name="speed" type="text" default="7000" label="Transition speed" description="Transition speed" />
+				<field name="display_bannertimer" type="list" default="1" label="Show/Hide banner timer" description="Select Show/Hide">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>
+				<field name="display_bullets" type="list" default="1" label="Show/Hide bullets control" description="Select Show/Hide">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+			</fieldset>			
+		</fields>
+	</config>
+</extension>
