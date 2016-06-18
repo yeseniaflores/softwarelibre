@@ -1,0 +1,170 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+.contenedor{
+	background:#0000FF;
+	width:90%;
+	height:100%;
+	max-width:1000px;
+	margin:auto;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	
+	/*flex-flow:row wrap;*/
+}
+body{
+	background:#190714;
+}
+p{
+   
+text-align : justify;
+
+}
+header{
+	background:#585858;
+	width:100%;
+	padding:20px;
+	
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	flex-flow:row wrap;
+}
+header #logo{
+	color:#fff;
+	font-size:30px;
+}
+header #logo a{
+	color:#fff;
+	text-decoration:none;
+}
+header nav{
+	width:50%;
+	
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+header nav a{
+	background:#000000;
+	color:#fff;
+	text-align:center;
+	text-decoration:none;
+	padding:10px;
+	
+	flex-grow:1;
+}
+.contenido{
+	background:#fff;
+	padding:20px;
+	flex:1 1 70%;
+	
+}
+.contenido article{
+	margin-bottom:20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #000;
+	
+}
+.contenido article:nth-last-child(1){
+	margin-bottom:0;
+	padding-bottom:0;
+	border-bottom:none;
+	
+}
+aside {
+	background: #0174DF  ;
+	padding:20px;
+	/*FLEX*/
+	flex:1 1 30%;
+	/*flex:0 0 300px;*/
+ 
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+ 
+aside #widget {
+	background:  #1162ac ;
+	height:150px;
+	margin:10px;
+}
+footer {
+	background:#A4A4A4;
+	width: 100%;
+	padding:20px;
+ 
+	/* Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+ 
+footer #links {
+	background:#000000;
+	display:flex;
+	flex-wrap:wrap;
+}
+ 
+footer #links a {
+	flex-grow:1;
+ 
+	color:#fff;
+	padding:10px;
+	text-align: center;
+	text-decoration:none;
+}
+ 
+footer #social {
+	background:#190714;
+}
+ 
+footer #social a {
+	color:#fff;
+	text-decoration: none;
+	padding:10px;
+	display: inline-block;
+}
+ 
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction:column;
+	}
+ 
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+ 
+	header .logo {
+		margin:20px 0;
+	}
+ 
+	header nav {
+		width: 100%;
+	}
+ 
+	aside {
+		flex-direction:row;
+		flex:0;
+	}
+ 
+	aside #widget {
+		flex-grow:1;
+	}
+}
+ 
+@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+ 
+	footer {
+		justify-content:space-around;
+	}
+}
+ 
